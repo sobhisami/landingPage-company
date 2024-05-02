@@ -49,6 +49,11 @@ font-size: 1em;
 .head >ul >li>.active{
   color: blue;
 }
+@media (max-width:750px) {
+  .head ul{
+    display: none;
+  }
+}
 /*Home*/
 .home{
   display: flex;
@@ -91,10 +96,17 @@ font-size: 1em;
   display: flex;
   flex-direction: row;
   padding: 90px 200px;
-  column-gap:20px;
+  column-gap:40px;
   align-items: center;
   max-width:1920px;
   min-height: 400px;
+}
+@media (max-width:750px) {
+  .about{
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 90px 20px;
+  }
 }
 .about img{
   height: 300px;
@@ -121,7 +133,6 @@ font-size: 1em;
   display: flex;
   flex-direction: column;
   background-color:#F7FBFF ;
-  height: 400px;
   max-width:1920px;
   font-size: 25px;
 }
@@ -137,15 +148,19 @@ font-size: 1em;
   display: flex;
   flex-direction: row;
   padding: 0 200px 0px;
-  height: 170px;
-  column-gap: 20px;
+  column-gap: 40px;
+}
+@media (max-width:750px) {
+  .service main{
+  flex-wrap: wrap;
+  padding: 0 50px;
+  }
 }
 .service main > article{
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  
 }
 .service main > article >img {
   height:40px;
@@ -160,7 +175,8 @@ font-size: 1em;
 }
 .service main > article >p{
   color: #868686;
-  font-size: 0.5em;
+  font-size: 0.6em;
+  text-align: justify;
 }
 /* Projects */
 .project{
@@ -168,10 +184,9 @@ font-size: 1em;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 90px 200px;
+  padding: 40px 200px;
   font-size: 25px;
   max-width: 1920px;
-  min-height: 490px;
 }
 .project span:first-child{
   text-align: center;
@@ -185,7 +200,12 @@ font-size: 1em;
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  column-gap: 20px;
+  column-gap: 35px;
+}
+@media (max-width:750px) {
+  .project main{
+    flex-wrap: wrap;
+  }
 }
 .project main >article{
   display: flex;
@@ -238,6 +258,9 @@ font-size: 1em;
   display: flex;
   flex-direction: row;
   column-gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
 }
 .client article img{
   height: 80px;
@@ -265,6 +288,7 @@ font-size: 1em;
   justify-content: space-between;
    padding: 0px 170px;
    column-gap: 10px;
+   flex-wrap: wrap;
 }
 .contact article>input{
   background-color: rgba(3, 124, 255, 12%);
@@ -289,7 +313,7 @@ font-size: 1em;
   background-color: rgba(3, 124, 255, 12%);
   padding: 20px;
   height: 170px;
-  width: 980px;
+  width: 80%;
 }
 .contact textarea::placeholder{
   color:#037CFF ;
@@ -356,6 +380,7 @@ footer{
    column-gap: 210px;
    justify-content: center;
    text-align: center ;
+   flex-wrap: wrap;
 }
 .Contact-Me main>article{
   display: flex;
